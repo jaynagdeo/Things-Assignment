@@ -1,4 +1,4 @@
-CFLAGS  += -I. -D_FILE_OFFSET_BITS=64 -Wall -W -Wdeclaration-after-statement
+CFLAGS  += -I. -D_FILE_OFFSET_BITS=64 -W -Wno-incompatible-pointer-types
 OFLAGS  = -O2
 
 OBJS=	aes.o

@@ -7,7 +7,7 @@
 int main(int argc, unsigned char const *argv[]) {
   /* code */
 char *p;
-unsigned int i=0,ret=0, mode=0,n;
+unsigned int i=0,ret=0, mode=1,n;
 
 unsigned long int NwkKey=0;
 
@@ -79,7 +79,7 @@ printf("\n\n");
 printf("The NwkKey is: ");
   for (i=0;i<16;i++)
     {
-      printf("%x", key[i]);
+      printf("%02x", key[i]);
     }
 printf("\n\n");
 
@@ -139,6 +139,7 @@ ret = mbedtls_aes_setkey_enc( &aes, key, 128 );
 //
 mbedtls_aes_crypt_ecb( &aes, mode, input, output);
 
+//mbedtls_aes_encrypt(&aes, input, output);
 
 printf("FNwkSIntKey: ");
  for (i=0;i<16;i++)

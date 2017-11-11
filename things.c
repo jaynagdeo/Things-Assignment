@@ -1,21 +1,5 @@
 #include<stdio.h>
 #include<stdlib.h>
-//#include "aes.h"
-
-// mbedtls_aes_context aes;
-//
-// unsigned char key[32];
-// unsigned char iv[16];
-//
-// unsigned char input [128];
-// unsigned char output[128];
-//
-// size_t input_len = 40;
-// size_t output_len = 0;
-
-
-// mbedtls_aes_setkey_enc( &aes, key, 256 );
-// mbedtls_aes_crypt_cbc( &aes, MBEDTLS_AES_ENCRYPT, 24, iv, input, output );
 
 int main(int argc, unsigned char const *argv[]) {
   /* code */

@@ -31,8 +31,10 @@ mbedtls_aes_context aes;
 
 unsigned char key[16]; // NwkKey
 
-unsigned char * lk1 = malloc(16 * sizeof(char));
-unsigned char * lk2 = malloc(16 * sizeof(char));
+unsigned char lk1[17];
+unsigned char lk2[17];
+// unsigned char * lk1 = malloc(16 * sizeof(char));
+// unsigned char * lk2 = malloc(16 * sizeof(char));
 
 unsigned char input [16]; //JoinNonce+JoinEUI+DevNonce
 unsigned char output[16]; // Output of encryption
@@ -46,6 +48,9 @@ DevNonce=strtoul(argv[4], &p, 16);
 //splitting the NwkKey into two parts
 memcpy( lk1, argv[1], 16 );
 memcpy( lk2, (argv[1]+16), 16 );
+
+lk1[16]='\0';
+lk2[16]='\0';
 
 NwkKey1=strtoul(lk1, &p, 16); //converting to HEX
 NwkKey2=strtoul(lk2, &p, 16);
@@ -103,4 +108,6 @@ printf("SNwkSIntKey: ");
 printf("\n\n");
 
 mbedtls_aes_free( &aes );
+// free(lk1);
+// free(lk2);
 }

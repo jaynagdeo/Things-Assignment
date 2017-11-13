@@ -1,4 +1,4 @@
-CFLAGS  += -I. -D_FILE_OFFSET_BITS=64 -Wall -W -Wno-incompatible-pointer-types -Wno-pointer-sign
+CFLAGS  += -I. -D_FILE_OFFSET_BITS=8 -Wall -W -Wno-incompatible-pointer-types -Wno-pointer-sign
 OFLAGS  = -O2
 
 OBJS=	aes.o

@@ -19,8 +19,8 @@ unsigned long int DevNonce=0; // 2 bytes
 // using character pointers to access bytes from a long integer
 unsigned char *tempNwkKey1;
 unsigned char *tempNwkKey2;
-tempNwkKey1=&NwkKey1;
-tempNwkKey2=&NwkKey2;
+tempNwkKey1=(unsigned char*)&NwkKey1;
+tempNwkKey2=(unsigned char*)&NwkKey2;
 
 mbedtls_aes_context aes;
 

@@ -4,7 +4,12 @@
 #include "mbedtls/aes.h"
 #include <string.h>
 
-int main(int argc, unsigned char const *argv[]) {
+int main(int argc, char** argv) { //unsigned char const *argv[]
+
+if (argc < 5) {
+  printf("Number of paramters enetered are less than required Parameters: <NwkKey> <JoinNonce> <JoinEUI> <DevNonce>\n");
+  return 1;
+}
 
 char *p;
 unsigned int i=0,mode=1;
